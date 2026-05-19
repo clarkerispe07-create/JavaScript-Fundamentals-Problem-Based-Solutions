@@ -1,73 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Community Toolbox</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="container">
+  <div class="container">
 
-  <h1>🔧 Community Toolbox</h1>
+    <h1>🔧 Community Toolbox</h1>
 
-  
-  <div class="stats">
-    <strong>Total Tools:</strong> <span id="total">0</span> &nbsp;|&nbsp;
-    <strong>Available:</strong> <span id="available">0</span> &nbsp;|&nbsp;
-    <strong>Lent Out:</strong> <span id="lent">0</span> &nbsp;|&nbsp;
-    <strong>Utilization Rate:</strong> <span id="rate">0%</span>
+    <!-- Statistics Section -->
+    <div class="stats">
+      <p><strong>Total Tools:</strong> <span id="total">0</span></p>
+      <p><strong>Available:</strong> <span id="available">0</span></p>
+      <p><strong>Lent Out:</strong> <span id="lent">0</span></p>
+      <p><strong>Utilization Rate:</strong> <span id="rate">0%</span></p>
+    </div>
+
+    <!-- Add Tool Form -->
+    <div class="form-box">
+
+      <h2>Add a Community Tool</h2>
+
+      <label>Tool Name</label>
+      <input type="text" id="tool-name" placeholder="Enter tool name">
+
+      <label>Category</label>
+      <select id="tool-category">
+        <option value="">Select Category</option>
+        <option>Power Tools</option>
+        <option>Hand Tools</option>
+        <option>Gardening</option>
+        <option>Cleaning</option>
+        <option>Ladders</option>
+        <option>Other</option>
+      </select>
+
+      <label>Owner Name</label>
+      <input type="text" id="owner-name" placeholder="Enter owner name">
+
+      <label>Unit / Apartment</label>
+      <input type="text" id="owner-unit" placeholder="Enter unit">
+
+      <label>Contact</label>
+      <input type="text" id="owner-contact" placeholder="Phone or Email">
+
+      <button onclick="addTool()">Add Tool</button>
+
+    </div>
+
+    <!-- Search and Filter -->
+    <div class="search-box">
+
+      <div>
+        <label>Search Tool</label>
+        <input
+          type="text"
+          id="search"
+          placeholder="Search by tool or owner"
+          oninput="displayTools()"
+        >
+      </div>
+
+      <div>
+        <label>Filter Status</label>
+
+        <select id="filter-status" onchange="displayTools()">
+          <option value="all">All</option>
+          <option value="available">Available</option>
+          <option value="lent">Lent Out</option>
+        </select>
+      </div>
+
+    </div>
+
+    <!-- Tool List -->
+    <div id="tool-list"></div>
+
   </div>
 
- 
-  <div class="form-box">
-    <h2>Add a Tool</h2>
-
-    <label>Tool Name:</label>
-    <input type="text" id="tool-name" placeholder="e.g. Cordless Drill" />
-
-    <label>Category:</label>
-    <select id="tool-category">
-      <option value="">-- Select --</option>
-      <option>Power Tools</option>
-      <option>Hand Tools</option>
-      <option>Gardening</option>
-      <option>Cleaning</option>
-      <option>Ladders</option>
-      <option>Other</option>
-    </select>
-
-    <label>Owner Name:</label>
-    <input type="text" id="owner-name" placeholder="e.g. John" />
-
-    <label>Unit / Apartment:</label>
-    <input type="text" id="owner-unit" placeholder="e.g. Unit 3B" />
-
-    <label>Contact (phone or email):</label>
-    <input type="text" id="owner-contact" placeholder="e.g. 09171234567" />
-
-    <button onclick="addTool()">Add Tool</button>
-  </div>
-
- 
-  <div class="search-box">
-    <label><strong>Search:</strong></label>
-    <input type="text" id="search" placeholder="Search by tool name or owner..." oninput="displayTools()" />
-
-    <label><strong>Filter by Status:</strong></label>
-    <select id="filter-status" onchange="displayTools()">
-      <option value="all">All</option>
-      <option value="available">Available</option>
-      <option value="lent">Lent Out</option>
-    </select>
-  </div>
-
- 
-  <div id="tool-list"></div>
-
-</div>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 
 </body>
 </html>
