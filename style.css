@@ -23,7 +23,6 @@ h1 {
   color: #ffffff;
 }
 
-/* Main Boxes */
 
 .stats,
 .form-box,
@@ -36,14 +35,11 @@ h1 {
   margin-bottom: 20px;
 }
 
-/* Stats */
 
 .stats p {
   margin-bottom: 8px;
   color: #d1d1d1;
 }
-
-/* Form */
 
 .form-box h2 {
   margin-bottom: 15px;
@@ -79,7 +75,6 @@ select:focus {
   border: 1px solid #ffffff;
 }
 
-/* Buttons */
 
 button {
   margin-top: 15px;
@@ -97,7 +92,6 @@ button:hover {
   background-color: #d9d9d9;
 }
 
-/* Search Box */
 
 .search-box {
   display: flex;
@@ -107,8 +101,6 @@ button:hover {
 .search-box div {
   flex: 1;
 }
-
-/* Tool Cards */
 
 .tool-card {
   transition: 0.3s;
@@ -128,7 +120,6 @@ button:hover {
   color: #d1d1d1;
 }
 
-/* Status */
 
 .status {
   font-weight: bold;
@@ -143,7 +134,6 @@ button:hover {
   color: #f87171;
 }
 
-/* Tool Buttons */
 
 .tool-buttons {
   margin-top: 15px;
@@ -153,7 +143,6 @@ button:hover {
   margin-right: 10px;
 }
 
-/* Specific Buttons */
 
 .lend-btn {
   background-color: #facc15;
@@ -181,8 +170,6 @@ button:hover {
 .delete-btn:hover {
   background-color: #dc2626;
 }
-
-/* Responsive */
 
 @media (max-width: 768px) {
 
